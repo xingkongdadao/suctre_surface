@@ -3,6 +3,5 @@ from django.shortcuts import render
 
 # Create your views here.
 
-
 def index(request):
-    return HttpResponse("Hello,产品应用!!!.")
+    return HttpResponse("Hello,人员信息组建 !!!.")
