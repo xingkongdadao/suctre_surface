@@ -4,4 +4,4 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello,人员信息组建 !!!.")
+    return HttpResponse("Hello,人员信息组建公司电脑 !!!.")
