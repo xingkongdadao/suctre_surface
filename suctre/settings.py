@@ -112,8 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-# LANGUAGE_CODE = 'zh-Hans'
-LANGUAGE_CODE = 'vi-VN'
+LANGUAGE_CODE = 'zh-Hans'
+# LANGUAGE_CODE = 'vi-VN'
 
 LANGUAGES = [
     ('en', 'English'),

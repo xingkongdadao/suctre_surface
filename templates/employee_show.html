@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>employee information show</title>
+</head>
+<body>
+<h1>
+员工信息
+</h1>
+
+{% for employee in employee_all %}
+    {{ employee.so_lam_viec }}<a href="#">{{ employee.ho_va_ten }}</a><br/>
+
+{% endfor %}
+
+
+</body>
+</html>
