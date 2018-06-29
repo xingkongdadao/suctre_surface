@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+from django.contrib import admin
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -25,7 +27,7 @@ SECRET_KEY = 'b6je5hs&c8@yd5wei_9pgf9an^spajgvyr-5fu3^%b##tsiatz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.12', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['192.168.1.7', '192.168.1.12', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -79,10 +81,10 @@ WSGI_APPLICATION = 'suctre.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'post',
+        'NAME': 'suctre_test',
         'USER': 'lijiang',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'PASSWORD': 'LIjiang20060707',
+        'HOST': '47.74.131.11',
         'PORT': '3306',
     }
 }
@@ -110,7 +112,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'zh-Hans'
+# LANGUAGE_CODE = 'zh-Hans'
+LANGUAGE_CODE = 'vi-VN'
 
 LANGUAGES = [
     ('en', 'English'),
@@ -132,3 +135,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+
+admin.site.site_header = 'QUẢN LÝ SỨC TRẺ '
