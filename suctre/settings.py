@@ -27,7 +27,7 @@ SECRET_KEY = 'b6je5hs&c8@yd5wei_9pgf9an^spajgvyr-5fu3^%b##tsiatz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.7', '192.168.1.12', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['14.185.133.134', '192.168.1.7', '192.168.1.12', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -128,7 +128,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -136,6 +136,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '/static/'),
+]
 
 
 admin.site.site_header = 'QUẢN LÝ SỨC TRẺ '

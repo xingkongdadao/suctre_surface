@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ employee_one.ho_va_ten }} show</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+<body>
+    <h1>{{ employee_one.ho_va_ten }}信息</h1>
+
+    {% if user.is_authenticated %}
+{#    {% if user.username == 'lekimanh' %}#}
+
+        <h3>员工号：{{ employee_one.so_lam_viec }}</h3><br/>
+        <h3>部门：{{ employee_one.bo_phan }}</h3><br/>
+        <h3>具体部门：{{ employee_one.bo_phan_cu_the}}</h3><br/>
+        <h3>职务：{{ employee_one.chuc_vu }}</h3><br/>
+        <h3>电话：{{ employee_one.dien_thoai }}</h3><br/>
+        <h3>邮箱:{{ employee_one.email }}</h3><br/>
+        <h3>性别：{{ employee_one.gioi_tinh }}</h3><br/>
+        <h3>出生日期：{{ employee_one.ngay_sinh }}</h3><br/>
+        <h3>工作状态：{{ employee_one.trang_thai }}</h3><br/>
+        <h3>入职时间：{{ employee_one.ngay_vao_cong_ty }}</h3><br/>
+        <h3>离职时间：{{ employee_one.ngay_ra_cong_ty }}</h3><br/>
+        <h3>家庭住址：{{ employee_one.dia_chi_cu_the }}</h3><br/>
+
+    {% endif %}
+
+
+
+</body>
+</html>

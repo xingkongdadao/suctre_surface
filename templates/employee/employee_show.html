@@ -8,7 +8,7 @@
     <h1>员工信息</h1>
 
     {% for employee in employee_all %}
-        {{ employee.so_lam_viec }}<a href="#">{{ employee.ho_va_ten }}</a><br/>
+        {{ employee.so_lam_viec }}<a href="{% url 'employee:employee_page' employee.so_lam_viec %}">{{ employee.ho_va_ten }}</a><br/>
     {% endfor %}
 
 
