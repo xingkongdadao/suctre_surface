@@ -14,6 +14,12 @@ class LoaiLam(models.Model):
         return self.loai_lam
 
 
+class Department(models.Model):
+    STT = models.UUIDField(default=uuid.uuid1, editable=False)
+    department = models.CharField(primary_key=True, max_length=50)
+    ghi_chu = models.CharField(max_length=50)
+
+
 class Employee(models.Model):
     so_lam_viec = models.CharField(max_length=20, primary_key=True, editable=False)
     ho_va_ten = models.CharField(max_length=30)
