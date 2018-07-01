@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'suctre.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'suctre_test',
+        'NAME': 'suctre_test1',
         'USER': 'lijiang',
         'PASSWORD': 'LIjiang20060707',
         'HOST': '47.74.131.11',

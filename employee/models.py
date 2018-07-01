@@ -5,9 +5,9 @@ from django.db import models
 
 class LoaiLam(models.Model):
     STT = models.UUIDField(default=uuid.uuid1, editable=False)
-    loai_lam = models.CharField(primary_key=True, max_length=20)
-    gio_quy_dinh_di_lam = models.DateTimeField()
-    gio_quy_dinh_tan_lam = models.DateTimeField()
+    loai_lam = models.CharField(primary_key=True, max_length=20, verbose_name='loài làm')
+    gio_quy_dinh_di_lam = models.DateTimeField(verbose_name='giờ quy đình đi làm')
+    gio_quy_dinh_tan_lam = models.DateTimeField(verbose_name='giờ quy đinh tan làm')
     ghi_chu = models.CharField(max_length=20, blank=True)
 
     def __str__(self):
@@ -15,15 +15,19 @@ class LoaiLam(models.Model):
 
 
 class Department(models.Model):
-    STT = models.UUIDField(default=uuid.uuid1, editable=False)
-    department = models.CharField(primary_key=True, max_length=50)
-    ghi_chu = models.CharField(max_length=50)
+    STT = models.UUIDField(primary_key=True, default=uuid.uuid1, editable=False)
+    department = models.CharField(max_length=50, unique=True, verbose_name='bộ phần')
+    department_cn = models.CharField(max_length=50, blank=True, null=True, verbose_name='部门')
+    ghi_chu = models.CharField(max_length=50, blank=True, verbose_name='ghi chú')
+
+    def __str__(self):
+        return self.department
 
 
 class Employee(models.Model):
     so_lam_viec = models.CharField(max_length=20, primary_key=True, editable=False)
     ho_va_ten = models.CharField(max_length=30)
-    bo_phan = models.CharField(max_length=30, blank=True)
+    bo_phan = models.ForeignKey(Department, on_delete=models.CASCADE)
     bo_phan_cu_the = models.CharField(max_length=30, blank=True)
     chuc_vu = models.CharField(max_length=30, blank=True)
     gioi_tinh = models.CharField(max_length=10, blank=True)
